@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Idea Hub - All Posts</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar navbar-expand-lg navbar-light">
+        <div class="navbar-logo-container d-flex align-items-center">
+          <img
+            class="navbar-logo-image mr-3"
+            src="./img/logo.svg"
+            alt="logo"
+            width="30"
+            height="30"
+          />
+
+          <a class="navbar-brand text-white" href="index.html">IdeaHub</a>
+        </div>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item navbar-nav-active">
+              <a class="nav-link text-white" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/profile.html"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/sign-up.html"
+                >Registration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container mt-4" style="margin-bottom: 100px">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="postsContainer"></div>
+
+          <nav aria-label="Posts navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-1"
+                    placeholder="Search for posts..."
+                    id="searchInput"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-body text-center">
+              <h5 class="card-title">Share Your Ideas</h5>
+              <p class="card-text">
+                Ready to inspire others? Create a post now!
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary btn-block"
+                data-toggle="modal"
+                data-target="#createPostModal"
+              >
+                Create Post
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Popular categories</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer container-fluid text-white text-center pt-3 fixed-bottom"
+    >
+      <p>&copy; 2024 IdeaHub. All rights reserved.</p>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="createPostModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="createPostModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="createPostModalLabel">
+              Create a New Post
+            </h5>
+            <button
+              id="closeAddPostModal"
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="postTitle">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postTitle"
+                  placeholder="Enter post title"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="postContent">Content</label>
+                <textarea
+                  class="form-control"
+                  id="postContent"
+                  rows="4"
+                  placeholder="Enter post content"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="postCategories">Categories (comma-separated)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postCategories"
+                  placeholder="Enter categories"
+                  required
+                />
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" id="addPost">
+                  Create Post
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Idea Hub - Profile</title>
+    <link rel="icon" href="../img/logo.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar navbar-expand-lg navbar-light">
+        <div class="navbar-logo-container d-flex align-items-center">
+          <img
+            class="navbar-logo-image mr-3"
+            src="../img/logo.svg"
+            alt="logo"
+            width="30"
+            height="30"
+          />
+          <a class="navbar-brand text-white" href="../index.html">IdeaHub</a>
+        </div>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item navbar-nav-active">
+              <a class="nav-link text-white" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="sign-up.html"
+                >Registration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container mt-4" style="margin-bottom: 100px">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Your Profile</h3>
+              <div class="profile-details">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Name</th>
+                      <td>Some Guy</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Email</th>
+                      <td>some.guy@example.com</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Gender</th>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Birth Date</th>
+                      <td>January 1, 1990</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 class="mt-4">Your Posts</h4>
+              <div class="user-posts">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Post Title 1</h5>
+                    <p class="card-subtitle text-muted mb-2">
+                      Posted on: February 12, 2024
+                    </p>
+                    <p class="card-text">Likes: 10 | Comments: 5</p>
+                    <a href="post.html" class="btn btn-success btn-sm"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Post Title 2</h5>
+                    <p class="card-subtitle text-muted mb-2">
+                      Posted on: February 13, 2024
+                    </p>
+                    <p class="card-text">Likes: 15 | Comments: 8</p>
+                    <a href="post.html" class="btn btn-success btn-sm"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <nav aria-label="Posts navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-body">
+            <h4 class="mb-3">Your Statistics</h4>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Total Posts</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total Comments</th>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total Likes Received</th>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total Comments Received</th>
+                  <td>12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer container-fluid text-white text-center pt-3 fixed-bottom"
+    >
+      <p>&copy; 2024 IdeaHub. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

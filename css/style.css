@@ -1,0 +1,39 @@
+:root {
+  --background-color-body: #f8f9fa;
+  --background-color-header: #28a745;
+  --background-color-footer: #398f4d;
+  --color-hover: #218838;
+  --tags-hover: #e6e6e6;
+}
+
+body {
+  background-color: var(--background-color-body);
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  background-color: var(--background-color-header);
+}
+.footer {
+  background-color: var(--background-color-footer);
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav-active {
+  color: #fff;
+  background-color: var(--color-hover);
+}
+
+.hoverable:hover {
+  background-color: var(--tags-hover);
+  cursor: pointer;
+}
+
+.like-button:not(.liked, .liked:hover) {
+  color: #218838;
+  background-color: #ffffff;
+}
